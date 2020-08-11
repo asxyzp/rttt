@@ -1,0 +1,83 @@
+/*Styling the rttt logo*/
+.logo-style{
+	font-family: 'Pacifico', cursive;
+}
+.logo-link{
+	text-decoration:none;
+	color: white;
+}
+.logo-link:hover{
+	text-decoration:none;
+	color: white;
+}
+
+/*Styling the top-bar of the webpage*/
+.top-bar{
+	padding: 10px;
+	background: #000;
+	color: #ffffff;
+	width:100%;
+}
+
+.top-bar-row-items{
+	display: flex;
+	align-items: center;
+}
+
+/*Styling message box & button associated with temporary ID*/
+/*Styling the button containing the text 'Generate temporary ID'*/
+.tempID-msg{
+	display: none;
+}
+.tempID-txt{
+	text-align:center;
+}
+.tempID-button{
+	padding: 5px;
+	width:100%;
+	text-align: center;
+}
+
+/*Styling the section which will contain temporary ID*/
+.tempID-show{
+	background: white;
+	color: black;
+	border-radius : 5px;
+	padding: 3px;
+}
+
+.err-text{
+	text-align:center;
+}
+.send-request-form{
+	display: none;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+.contestant-input-id{
+	text-align: center;
+}
+.send-request{
+	width:100%;
+}
+
+.notification-bar{
+	margin: 10px;
+}
+.notification-btn{
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+@media(max-width:1045px){
+	.tempID-button{
+		display: block;
+		margin-top:10px;
+	}
+	.tempID-msg{
+		display: block;
+		margin-top:10px;
+	}
+}

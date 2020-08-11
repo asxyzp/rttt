@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>rttt - remote tic-tac-toe</title>
+
+		<!--Importing fonts, site icon, external stylesheets (incl. bootstrap)-->
+		<link rel="icon" href="rttt.png">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css"/>
+		
+		<!--Using script tags to access external stylesheets & script tag-->
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="script.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+	</head>
+	<body>
+
+		<!--Site's top-bar which allows user to generate a new temporary ID-->
+		<div class="container-fluid top-bar">
+			<div class="row top-bar-row">
+
+				<!--Site logo-->
+				<div class="col-md-1 top-bar-row-items">
+					<a href="https://rttt.asxyzp.repl.co/" class="logo-link"><h1 class="logo-style">rttt</h1></a>
+				</div>
+				
+				<!--Generate temp. ID button-->
+				<div class="col-md-3 top-bar-row-items">
+					<button class="btn btn-primary tempID-button">Generate temporary ID</button>
+				</div>
+				
+				<!--Message box containing temporary ID messages-->
+				<div class="col-md-8 top-bar-row-items">
+					<div class="tempID-msg">
+						<span class="tempID-txt">Your temporary ID is <span class="tempID-show"></span>. Send this ID to your friend for a game request.</span>
+					</div>
+				</div>
+			</div>
+
+			<!--Button & input text to send user request-->
+			<div class="row send-request-form">
+				<div class="col-md-6">
+					<input type="text" class="form-control contestant-input-id" placeholder="Enter contestant's ID"/>
+				</div>
+				<div class="col-md-6">
+					<button class="btn btn-primary send-request">Send request</button>
+				</div>
+			</div>
+		</div>
+
+		<!--Notification bar-->
+		<div class="notification-bar">
+			
+			<!--Notification button which will contain the no. of notifications-->
+			<div class="notification-btn">
+				<button class="btn btn-primary" id="notification-btn">0</button>
+			</div>
+
+			<!--Contains notifications-->
+			<div class="notification-div">
+				
+				<!--Notification text-->
+				<div class="notification-txt">
+					<h2>Notifications :</h2>
+				</div>
+				
+				<!---->
+				<div class="notification-box">
+					
+					
+					
+					<!--Success notification message when not connected to the server-->
+					<div class="alert alert-danger" id="alert-server-connect-error" role="alert">
+						<span class="alert-text">Whoops! You cannot connect to the server. Generate a new temporary ID or check your internet connection & try again.</span>
+						
+						<!--Dismissing message using X-->
+						<span class="alert-dismiss">
+							<button type="button" class="close" id="close-error" aria-label="Close">
+  								<span aria-hidden="true">&times;</span>
+							</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
