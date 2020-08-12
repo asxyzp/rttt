@@ -13,6 +13,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 		<script src="script.js"></script>
 
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/> 
 	</head>
 	<body>
@@ -59,31 +60,19 @@
 			</div>
 
 			<!--Contains notifications-->
-			<div class="notification-div">
+			<div class="container notification-div">
 				
 				<!--Notification text-->
 				<div class="notification-txt">
 					<h2>Notifications :</h2>
+					<hr>
 				</div>
-				
-				<!---->
-				<div class="notification-box">
-					
-					
-					
-					<!--Success notification message when not connected to the server-->
-					<div class="alert alert-danger" id="alert-server-connect-error" role="alert">
-						<span class="alert-text">Whoops! You cannot connect to the server. Generate a new temporary ID or check your internet connection & try again.</span>
-						
-						<!--Dismissing message using X-->
-						<span class="alert-dismiss">
-							<button type="button" class="close" id="close-error" aria-label="Close">
-  								<span aria-hidden="true">&times;</span>
-							</button>
-						</span>
-					</div>
-				</div>
+				<!--NO notification text will be displayed when there's no notificaion-->
+				<em class="no-notification-txt">No notifications right now</em>
+				<!--All notifications will be appended in the notification-box-->
+				<div class="notification-box"></div>
 			</div>
+			
 		</div>
 	</body>
 </html>
